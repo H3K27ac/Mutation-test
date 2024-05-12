@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
+  </head>
+  <body>
+    <div class="Inputs">
+        <h1>Inputs</h1>
+        <form>
+            <div>
+                <label for="sequence">Define original sequence</label>
+                <input type="text" id="inputsequence" name="sequence" placeholder="Enter sequence">
+            </div>
+            <div>
+                <label for="subchance">Substitution mutation chance</label>
+                <input type="number" id="subchance" name="subchance" placeholder="0">
+            </div>
+            <div>
+                <label for="delchance">Point deletion mutation chance</label>
+                <input type="number" id="deletionchance" name="delchance" placeholder="0">
+            </div>
+            <div>
+                <label for="inschance">Point insertion mutation chance</label>
+                <input type="number" id="insertionchance" name="inschance" placeholder="0">
+            </div>
+            <button onClick="SetInputs()" class="Button">Confirm</button>
+        </form>
+    </div>
+    <div class="Main">
+      <button onClick="RunTick()" class="Button">Run 1 tick</button>
+      <button onClick="ToggleRun()" class="Button">Start Running</button>
+      <div class="Display" id="display">
+        <div class="OriginalDisplay" id="originaldisplay"></div>
+        <div class="NewDisplay" id="newdisplay"></div>
+        <div class="MutationDisplay" id="mutationdisplay"></div>
+      </div>
+    </div>
+  </body>
+</html>
